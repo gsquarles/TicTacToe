@@ -1,4 +1,63 @@
-*{
-    padding: 0;
-    margin: 0;
+
+body{
+    display: flex;
+    justify-content: center;
+}
+#wrapper{
+    border: 2px solid black;
+    width: 900px;
+    height: 450px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 50px 50px 250px 100px;
+}
+#boardContainer{
+    background-color: aquamarine;
+    width: 100%;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameBoard{
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3,80px);
+    height: 240px;
+}
+button{
+    background-color: aquamarine;
+    border: 0;
+}
+.posOne{
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+.posTwo{
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    
+}
+.posThree{
+    border-bottom: 3px solid black;
+}
+.posFour{
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+.posFive{
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+}
+.posSix{
+    border-bottom: 3px solid black;
+}
+.posSeven{
+    border-right: 3px solid black;
+}
+.posEight{
+    border-right: 3px solid black;
+}
+.posNine{
+     
 }
