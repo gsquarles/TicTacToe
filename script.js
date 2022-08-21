@@ -16,11 +16,13 @@ const cellElements = document.querySelectorAll('[data-cell]');
 const board = document.getElementById('board');
 const winningMessageElement = document.getElementById('winningMessage');
 const restartButton = document.getElementById('restartButton');
+const playerOne = document.getElementById('turn1');
+const playerTwo =document.getElementById('turn2');
 const winningMessageTextElement = document.querySelector(
 '[data-winning-message-text]');
 let circleTurn;
 return {X_CLASS,CIRCLE_CLASS, WINNING_COMBINATIONS, cellElements,board,
-winningMessageElement, restartButton,winningMessageTextElement,circleTurn}
+winningMessageElement, restartButton,winningMessageTextElement,circleTurn, playerOne, playerTwo}
 })();
 
 startGame();
@@ -55,6 +57,8 @@ function handleClick(e){
     }
 }
 
+
+
 function endGame(draw){
     if (draw){
         setBoard.winningMessageTextElement.innerText = 'Draw!'
@@ -78,6 +82,14 @@ function placeMark(cell, currentClass){
 
 function swapTurns(){
     circleTurn = !circleTurn;
+    if(!circleTurn){
+        setBoard.playerTwo.classList.remove('markO');
+        setBoard.playerOne.classList.add('markX');
+    }
+    else if(circleTurn){
+        setBoard.playerOne.classList.remove('markX');
+        setBoard.playerTwo.classList.add('markO');
+    }
 }
 function setBoardHoverClass(){
     board.classList.remove(setBoard.X_CLASS);

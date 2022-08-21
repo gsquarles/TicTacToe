@@ -10,6 +10,26 @@
 body{
     margin: 0;
 }
+.turnHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#turn1, #turn2{
+    position: relative;
+    top: 100px;
+    left: 20px;
+    font-size: 1.5rem;
+}
+#turn1{
+    left: -25px;
+}
+#turn1.markX{
+    border: 2px solid black;
+}
+#turn2.markO{
+    border: 2px solid black;
+}
 
 .board{
     width: 100vw;
